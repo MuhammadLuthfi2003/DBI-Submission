@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
 
     [Tooltip("Player Settings")]
     public float moveSpeed = 5f; // Speed of the player movement
+    public int playerHP = 3; // Player health points
+
+    [HideInInspector] public bool isFacingLeft = false; // Check if the player is facing left
 
     // Start is called before the first frame update
     void Start()
@@ -37,11 +40,13 @@ public class PlayerController : MonoBehaviour
         {
             Move(-1);
             spriteRenderer.flipX = true; // Flip the sprite to face left
+            isFacingLeft = true; // Set facing left state
         }
         else if (Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.D))
         {
             Move(1);
             spriteRenderer.flipX = false; // Flip the sprite to face right
+            isFacingLeft = false; // Set facing right state
         }
         else
         {
