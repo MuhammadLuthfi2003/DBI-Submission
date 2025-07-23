@@ -12,9 +12,11 @@ GameObject:
   - component: {fileID: 3472746818051893245}
   - component: {fileID: 7257648577633216423}
   - component: {fileID: 4000261683033531813}
+  - component: {fileID: 6062268122816536970}
+  - component: {fileID: 5006800422194099638}
   m_Layer: 0
   m_Name: enemies_sheet_4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -74,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 1241274338, guid: 8c9a6128325236b43a5c8bfce7b7abda, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -152,3 +154,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.51, y: 0.26}
   m_EdgeRadius: 0
+--- !u!114 &6062268122816536970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607906388526661982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 974a3e255ee107f46a5907a7861801af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  speed: 2
+  walkDistance: 5
+  isGoingLeft: 1
+--- !u!114 &5006800422194099638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607906388526661982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccfc918a07f818e418b768ab3b8eb9df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knockbackForce: 5
